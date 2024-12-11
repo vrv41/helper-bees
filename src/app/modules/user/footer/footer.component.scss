@@ -1,0 +1,44 @@
+.footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: left;
+    margin-top: auto; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Sofia Pro Light';
+  }
+  .footer-container {
+    align-items: center;
+    padding: 1.5rem 3rem;
+    display: flex;
+  
+  }
+  .footer-right{
+    padding: 2px;
+    font-family: 'Sofia Pro Regular';
+     a{
+        padding:0 10px;
+        margin:0 10px;
+        text-decoration: none;
+        color:#000000;
+      }
+  }
+
+
+  @media (max-width: 575.98px) { 
+    .footer-container {
+      padding: 0.5rem;
+      display: block;
+    }
+    .footer-left{
+      text-align: center;
+    }
+    .footer-right {
+      text-align: center;
+      a{
+          padding:0 5px;
+          margin: 0;;    
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="w-100 py-4">
+    <h2 class="assessment-header">What is your favorite movie?</h2>
+    <p class="sub-text">Address</p>
+        <div class=" col-12 col-lg-10 col-md-12 col-sm-12 ">
+            <div class="col-12 col-lg-8 col-md-10 col-sm-12  py-2 " >
+                <label class=" d-block label-assessment-horizontal py-2">Address 1</label>
+                <input type="text" class="assessment-input w-100">
+              </div>
+            <div class="col-12 col-lg-8 col-md-10 col-sm-12 py-2 " >
+                <label class="d-block label-assessment-horizontal py-2">Address 2</label>
+                <input type="text" class="assessment-input w-100">
+              </div>
+              <div class=" row  py-2 " >
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <label class="d-block label-assessment-horizontal py-2">City</label>
+                    <input type="text" class="assessment-input w-100">
+                </div>
+                <div class="col-12 col-lg-2 col-sm-12 col-md-3">
+                    <label class="d-block label-assessment-horizontal py-2">State</label>
+                    <input type="text" class="assessment-input w-100">
+                </div>
+                <div class="col-12 col-lg-2 col-sm-12 col-md-3">
+                    <label class="d-block label-assessment-horizontal py-2">Zip Code</label>
+                    <input type="text" class="assessment-input w-100">
+                </div>
+               
+              </div>
+
+             
+            <app-page-nav  [nextSlide]="6" [previousSlide]="4" (navigateevent)="nextFn($event)"></app-page-nav>
+        </div>
+       
+    </div>

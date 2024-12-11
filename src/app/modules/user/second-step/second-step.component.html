@@ -1,0 +1,22 @@
+<div class="w-100 py-4">
+    <h2 class="assessment-header">How long have you been an angular developer?</h2>
+    <!-- <p class="sub-text">(Check all that apply)</p> -->
+        <div class="col-12 col-lg-8 col-md-8 col-sm-12 ">
+            <div class="form-check py-3 px-2" *ngFor="let item of ageGroupArr">
+                <label class="form-check-label label-assessment" for="radio1" >
+                  <input type="radio" class="form-check-input" id="ageGroup{{item.id}}"  name="ageGroup"  value="item.value"> <span class="px-2">{{item.value}}</span>
+                </label>
+              </div>
+              <!-- <div class="d-flex justify-content-between py-4 align-items-center">
+                <span class="btn-back" (click)="nextFn(1,'firstStep')">
+                    <span><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5.25C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75L15 5.25ZM0.46967 6.53033C0.176777 6.23744 0.176777 5.76256 0.46967 5.46967L5.24264 0.696698C5.53553 0.403805 6.01041 0.403805 6.3033 0.696698C6.59619 0.989592 6.59619 1.46447 6.3033 1.75736L2.06066 6L6.3033 10.2426C6.59619 10.5355 6.59619 11.0104 6.3033 11.3033C6.01041 11.5962 5.53553 11.5962 5.24264 11.3033L0.46967 6.53033ZM15 6.75L1 6.75L1 5.25L15 5.25L15 6.75Z" fill="#22549F"/>
+                        </svg>
+                        </span>
+                    Previous Question</span>
+                <button class="btn-button assessment-btn" (click)="nextFn(3,'thirdStep')">Next</button>
+            </div> -->
+            <app-page-nav  [nextSlide]="3" [previousSlide]="1" (navigateevent)="nextFn($event)"></app-page-nav>
+        </div>
+       
+    </div>

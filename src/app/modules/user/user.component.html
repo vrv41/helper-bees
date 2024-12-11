@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="content">
+    <app-user-profile *ngIf="selectedMenuData=='start'" (clickevent)="selectedMenu($event)"></app-user-profile>
+    <div class="info-conatiner" *ngIf="selectedMenuData!=='start'&&(selectedMenuData!=='final')">
+        <div class="container assesment-window ">
+            <app-progress-bar [slideorder]="slideorder" *ngIf="(selectedMenuData!=='start')&&(selectedMenuData!=='final')"></app-progress-bar>
+            <app-first-step (clickevent)="selectedMenu($event)" *ngIf="selectedMenuData=='firstStep'"></app-first-step>
+            <app-second-step (clickevent)="selectedMenu($event)" *ngIf="selectedMenuData=='secondStep'"></app-second-step>
+            <app-third-step (clickevent)="selectedMenu($event)" *ngIf="selectedMenuData=='thirdStep'"></app-third-step>
+            <app-fourth-step (clickevent)="selectedMenu($event)" *ngIf="selectedMenuData=='fourthStep'"></app-fourth-step>
+            <app-fifth-step (clickevent)="selectedMenu($event)" *ngIf="selectedMenuData=='fifthStep'"></app-fifth-step>
+          
+        </div>
+        
+    </div>
+    <app-final-step *ngIf="selectedMenuData=='final'" ></app-final-step>
+</div>
+
+<app-footer></app-footer>

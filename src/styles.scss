@@ -1,0 +1,140 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Sofia Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro Regular'), url('../src/assets/fonts/sofia-pro-webfont/SofiaProRegular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Sofia Pro Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro Light'), url('../src/assets/fonts/sofia-pro-webfont/SofiaProLight.woff') format('woff');
+    }
+    
+
+
+    @font-face {
+    font-family: 'Sofia Pro Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro Medium'), url('../src/assets/fonts/sofia-pro-webfont/SofiaProMedium.woff') format('woff');
+    }
+    
+
+   
+
+    @font-face {
+    font-family: 'Sofia Pro SemiBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro SemiBold'), url('../src/assets/fonts/sofia-pro-webfont/SofiaProSemiBold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Sofia Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sofia Pro Bold'), url('../src/assets/fonts/sofia-pro-webfont/SofiaProBold.woff') format('woff');
+    }
+    @font-face {
+    font-family: 'Alda OT CEV Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Alda OT CEV Regular'), url('../src/assets/fonts/Alda-OT-CEV-Regular.otf') format('opentype');
+    }
+    
+body{
+  font-family: 'Sofia Pro Regular';
+  overflow: hidden;
+}
+.btn-button{
+    background: #FFD744;
+    color:#2C2C2C;
+    padding:6px 4px;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid #FFD744;
+    &:hover{
+        background: #ffffff;
+        border-color:  #2C2C2C;
+    }
+}
+@mixin font-settings($fontValue, $fontFamily,$color,$line-height, $letter-spacing) {
+    font-size: $fontValue;
+    font-family: $fontFamily;
+    color:$color;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing
+  }
+.btn-back{
+    @include font-settings(20px, 'Sofia Pro Light',#22549F,28px,0.2px); 
+    cursor: default;
+    &:hover{
+      text-decoration: underline;
+    } 
+}
+.landing-btn{
+    height: 64px;
+    width: 341px;
+    font-size: 24px;
+}
+.assessment-btn{
+    font-size: 20px;
+    width: 241px;
+}
+.assessment-header{
+    @include font-settings(28px, 'Sofia Pro Regular',#363636,36px,0px);
+
+}
+.error{
+  color:#e64941
+}
+input[type="checkbox"]{
+    width: 16px; 
+    height: 16px;
+    cursor: pointer;
+    border-radius:15px;
+  }
+  .label-assessment{
+    @include font-settings(20px, 'Sofia Pro Regular',#363636,28px,0.2px);
+  }
+  .label-assessment-horizontal{
+    @include font-settings(16px, 'Sofia Pro Regular',#363636,28px,0.2px);
+  }
+  .assessment-input{
+   border-radius: 4px;
+   border:1.5px solid #868686;
+   padding: 15px 20px; 
+   color: #868686;
+  }
+  @media (max-width: 575.98px) {
+  .landing-btn{
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+}
+  .btn-button{
+  padding: 4px;
+  }
+  .assessment-header{
+    @include font-settings(20px, 'Sofia Pro Regular',#363636,28px,0px);
+}
+.assessment-btn{
+  font-size: 16px;
+  width: 150px;
+}
+
+.btn-back{
+  @include font-settings(16px, 'Sofia Pro Light',#22549F,26px,0.2px);
+  width: 100%;
+ }
+ .label-assessment{@include font-settings(16px, 'Sofia Pro Regular',#363636,26px,0.2px)};
+ .assessment-input{
+  padding:8px 10px; 
+ }
+
+   }

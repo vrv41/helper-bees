@@ -1,0 +1,37 @@
+<div class="w-100 py-4">
+    <h2 class="assessment-header">What is your favorite movie?</h2>
+    <p class="sub-text">(If you have more than one favorite movie, select <span class="fw-bold">Add Favorite Movie</span> to enter its details. )</p>
+        <div class=" col-12 col-lg-10 col-md-12 col-sm-12 ">
+          <form [formGroup]="moviesForm" (ngSubmit)="saveMovies()">
+          <div   formArrayName="movies" *ngFor="let movie of movies.controls; let i = index">
+            <fieldset [formGroupName]="i" class="row">
+            <div class="col-12 col-sm-12 col-lg-6 col-md-6  py-3 " >
+              <label class=" d-block label-assessment-horizontal py-2" for="title-{{ i }}">Title</label>
+              <input type="text" class="assessment-input w-100" id="title-{{ i }}"  formControlName="title"
+              placeholder="Enter movie title">
+              <div *ngIf="movie.get('title')?.invalid && movie.get('title')?.touched">
+                <small class="error">Title is required</small>
+              </div>
+            </div>
+           <div class="col-12 col-sm-12 col-lg-6 col-md-6 py-3 " >
+              <label class="d-block label-assessment-horizontal py-2" for="year-{{ i }}">Year of Release</label>
+              <input type="text" formControlName="year"  id="year-{{ i }}"
+              placeholder="Enter release year" class="assessment-input w-100">
+              <div *ngIf="movie.get('year')?.invalid && movie.get('year')?.touched">
+                <small class="error">Valid year is required</small>
+              </div>
+            </div>
+            </fieldset>
+          </div>
+           </form>
+
+              <div class="col-12 col-sm-12 col-lg-6 col-md-6">
+                <button class="btn-button addmore-btn"  (click)="addMovie()">Add Favorite Movie</button>
+              </div>
+              <div>
+                <app-page-nav  [nextSlide]="4" [previousSlide]="2" nextButtonText="Next" (navigateevent)="nextFn($event)"></app-page-nav>
+              </div>
+            
+        </div>
+       
+    </div>

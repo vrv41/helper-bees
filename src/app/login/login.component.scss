@@ -1,0 +1,81 @@
+
+.login-content {
+    height:100vh;
+    overflow-y: auto;
+    // padding: 0 2rem;
+    }
+.img-container{ 
+    width: 580px; 
+ }
+  .image-side{
+    place-content: center;
+  }
+  .left-side{
+     display: flex;
+     place-content: center;
+     padding: 0 4rem;
+     background: url(../../assets/img/Union.png) no-repeat left;
+    background-size: cover;
+    height: 100%;
+  }
+  .right-side{
+     place-content: center;
+     padding: 0 4rem
+  }
+  .heading-container{
+     padding: 0 2rem 0 0;
+     width: 100%;
+  }
+  .text-conatiner{
+    padding: 0 1rem 0 0;
+    width: 100%;
+  }
+  .heading-container h2{
+   font-size: 40px;
+   font-family: 'Alda OT CEV Regular';
+   line-height: 48px;
+  }
+  .text-conatiner p{
+     padding-top: 1rem  ;
+     padding-bottom: 1rem;
+     font-size: 20px;
+     line-height: 28px;
+    }
+ 
+    @media (max-width: 575.98px) { 
+       .left-side,.right-side{
+       padding: 1rem 2rem;
+      }
+      .heading-container{
+         padding: 0 2rem 0 0;
+      }
+      .heading-container h2{
+         font-size: 24px;
+         line-height: 30px;
+      } 
+      .text-conatiner{
+       padding: 0 0.5rem 0 0;
+      
+     }
+      .text-conatiner p{
+       padding-top: 1rem  ;
+       padding-bottom: 1rem;
+       font-size: 16px;
+       line-height: 26px;
+      }
+      .img-container{
+       height:250px;
+       width: 300px; 
+    }
+    }
+ 
+ 
+ // Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) { 
+      .left-side,.right-side{
+    padding: 0 2rem;
+   } 
+   .heading-container{
+    padding: 0 2rem 0 0;
+ }
+}
